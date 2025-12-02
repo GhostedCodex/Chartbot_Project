@@ -1,11 +1,16 @@
+import random
+from nltk.stem import WordNetLemmatizer
 from flask import Flask, render_template, request, jsonify
 import pickle
 import numpy as np
 from tensorflow.keras.models import load_model
 import json
 import nltk
-from nltk.stem import WordNetLemmatizer
-import random
+
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
 
 lemmatizer = WordNetLemmatizer()
 app = Flask(__name__)
