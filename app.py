@@ -29,7 +29,8 @@ MEMORY_FILE = "data/memory.json"
 model = load_model(MODEL_PATH)
 words = pickle.load(open(WORDS_PKL, "rb"))
 classes = pickle.load(open(CLASSES_PKL, "rb"))
-intents = json.load(open(INTENTS_JSON, "r"))
+with open(INTENTS_JSON, "r", encoding="utf-8") as f:
+    intents = json.load(f)
 
 # Ensure memory file exists
 if not os.path.exists("data"):

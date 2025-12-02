@@ -13,7 +13,8 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 lemmatizer = WordNetLemmatizer()
 
-data = json.loads(open('intents.json').read())
+with open('intents.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
 words = []
 classes = []
