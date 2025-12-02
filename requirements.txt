@@ -1,5 +1,5 @@
-Flask==2.3.3
-tensorflow-cpu    # If using DL
+Flask
 numpy
-pickle5
+nltk
+tensorflow-cpu
 gunicorn
