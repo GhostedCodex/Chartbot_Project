@@ -1,6 +1,5 @@
 Flask==2.3.3
 tensorflow-cpu    # If using DL
-keras==2.12.0
 numpy
 pickle5
 gunicorn
