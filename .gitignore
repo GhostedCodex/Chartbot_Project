@@ -1,0 +1,16 @@
+# Python bytecode (temporary files created by Python)
+__pycache__/
+*.pyc
+
+# Virtual Environments (we don't upload the libraries, just the requirements)
+venv/
+env/
+.env
+
+# IDE settings (VS Code or PyCharm settings are personal, not for the project)
+.vscode/
+.idea/
+
+# Mac OS generated files (if you are on a Mac)
+.DS_Store
+

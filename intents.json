@@ -1,0 +1,151 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day",
+                "What's up",
+                "Yo",
+                "Hey there"
+            ],
+            "responses": [
+                "Hello!",
+                "Good to see you again!",
+                "Hi there, how can I help?",
+                "Greetings!",
+                "Hello, I am ready to help."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Nice chatting to you, bye",
+                "Till next time",
+                "I'm leaving"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back soon.",
+                "Sad to see you go. Bye!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me",
+                "I appreciate it"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure",
+                "You are welcome!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "How can you help me?",
+                "What can you do?",
+                "What help do you provide?",
+                "Help",
+                "Support",
+                "What are your features?"
+            ],
+            "responses": [
+                "I can guide you through building a deep learning project!",
+                "I can answer tech questions.",
+                "I am a bot designed to assist you with Python and AI."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "What is your name?",
+                "Who are you?",
+                "Do you have a name?",
+                "What should I call you?"
+            ],
+            "responses": [
+                "I am a Deep Learning Chatbot built by you!",
+                "You can call me Bot.",
+                "I'm your friendly neighborhood AI assistant."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "How old are you?",
+                "When were you born?",
+                "What is your age?"
+            ],
+            "responses": [
+                "I was born the moment you ran the code.",
+                "Age is just a number, but I am very young.",
+                "I am timeless."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "jokes",
+            "patterns": [
+                "Tell me a joke",
+                "Say something funny",
+                "Do you know any jokes?",
+                "Make me laugh"
+            ],
+            "responses": [
+                "Why do Java programmers wear glasses? Because they don't C#.",
+                "There are 10 types of people in the world: Those who understand binary, and those who don't.",
+                "A SQL query walks into a bar, walks up to two tables and asks... 'Can I join you?'"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "creator",
+            "patterns": [
+                "Who created you?",
+                "Who made you?",
+                "Who is your developer?"
+            ],
+            "responses": [
+                "I was created by a brilliant developer using Python and Deep Learning.",
+                "My logic is written in Python, but my soul belongs to my creator."
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}
