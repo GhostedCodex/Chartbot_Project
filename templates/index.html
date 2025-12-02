@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 400px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            margin-top: 5vh;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #e5e5e5;
+        }
+
+        .message {
+            margin: 10px 0;
+            display: flex;
+        }
+
+        .user-msg {
+            justify-content: flex-end;
+        }
+
+        .bot-msg {
+            justify-content: flex-start;
+        }
+
+        .bubble {
+            padding: 10px 15px;
+            border-radius: 20px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .user-bubble {
+            background: #007bff;
+            color: white;
+            border-bottom-right-radius: 0;
+        }
+
+        .bot-bubble {
+            background: #fff;
+            color: black;
+            border-bottom-left-radius: 0;
+            border: 1px solid #ddd;
+        }
+
+        .input-area {
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background: #fff;
+            display: flex;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">AI Chatbot</div>
+        <div class="chat-box" id="chatbox">
+            <div class="message bot-msg">
+                <div class="bubble bot-bubble">Hello! I am your AI assistant.</div>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="textInput" placeholder="Type a message...">
+            <button onclick="getBotResponse()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function getBotResponse() {
+            var rawText = $("#textInput").val();
+            if (rawText.trim() === "") return;
+
+            // Add user message
+            var userHtml = '<div class="message user-msg"><div class="bubble user-bubble">' + rawText + '</div></div>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+
+            // Send to Python backend
+            $.get("/get", { msg: rawText }).done(function (data) {
+                var botHtml = '<div class="message bot-msg"><div class="bubble bot-bubble">' + data + '</div></div>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+            });
+        }
+
+        // Allow pressing "Enter" to send
+        $("#textInput").keypress(function (e) {
+            if (e.which == 13) {
+                getBotResponse();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+Flask
+numpy
+nltk
+tensorflow-cpu
+gunicorn
