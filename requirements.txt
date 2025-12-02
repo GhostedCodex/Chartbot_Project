@@ -1,5 +1,10 @@
-Flask
-numpy
+flask
+tensorflow==2.13.0
 nltk
-tensorflow-cpu
+numpy
+scikit-learn
+pyyaml
+sentence-transformers
+faiss-cpu
+requests
 gunicorn

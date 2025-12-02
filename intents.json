@@ -3,148 +3,338 @@
         {
             "tag": "greeting",
             "patterns": [
-                "Hi",
-                "How are you",
-                "Is anyone there?",
-                "Hello",
-                "Good day",
-                "What's up",
-                "Yo",
-                "Hey there"
+                "hi",
+                "hello",
+                "hey",
+                "good morning",
+                "good afternoon",
+                "yo",
+                "hiya"
             ],
             "responses": [
-                "Hello!",
-                "Good to see you again!",
-                "Hi there, how can I help?",
-                "Greetings!",
-                "Hello, I am ready to help."
-            ],
-            "context": [
-                ""
+                "👋 Hello! I'm Ghost — how can I help you today?",
+                "Hi! Ghost here. What are we building?"
             ]
         },
         {
             "tag": "goodbye",
             "patterns": [
-                "Bye",
-                "See you later",
-                "Goodbye",
-                "Nice chatting to you, bye",
-                "Till next time",
-                "I'm leaving"
+                "bye",
+                "goodbye",
+                "see you",
+                "later",
+                "i'm leaving"
             ],
             "responses": [
-                "See you!",
-                "Have a nice day",
-                "Bye! Come back soon.",
-                "Sad to see you go. Bye!"
-            ],
-            "context": [
-                ""
+                "See you! 👻",
+                "Goodbye — come back anytime."
             ]
         },
         {
             "tag": "thanks",
             "patterns": [
-                "Thanks",
-                "Thank you",
-                "That's helpful",
-                "Awesome, thanks",
-                "Thanks for helping me",
-                "I appreciate it"
+                "thanks",
+                "thank you",
+                "cheers",
+                "much appreciated"
             ],
             "responses": [
-                "Happy to help!",
-                "Any time!",
-                "My pleasure",
-                "You are welcome!"
-            ],
-            "context": [
-                ""
-            ]
-        },
-        {
-            "tag": "options",
-            "patterns": [
-                "How can you help me?",
-                "What can you do?",
-                "What help do you provide?",
-                "Help",
-                "Support",
-                "What are your features?"
-            ],
-            "responses": [
-                "I can guide you through building a deep learning project!",
-                "I can answer tech questions.",
-                "I am a bot designed to assist you with Python and AI."
-            ],
-            "context": [
-                ""
+                "You're welcome!",
+                "Glad to help!"
             ]
         },
         {
             "tag": "name",
             "patterns": [
-                "What is your name?",
-                "Who are you?",
-                "Do you have a name?",
-                "What should I call you?"
+                "what is your name",
+                "who are you",
+                "what should i call you"
             ],
             "responses": [
-                "I am a Deep Learning Chatbot built by you!",
-                "You can call me Bot.",
-                "I'm your friendly neighborhood AI assistant."
-            ],
-            "context": [
-                ""
+                "I'm Ghost — your smart AI assistant. 👻"
             ]
         },
         {
-            "tag": "age",
+            "tag": "creator_info",
             "patterns": [
-                "How old are you?",
-                "When were you born?",
-                "What is your age?"
+                "who created you",
+                "who built you",
+                "who is your developer",
+                "who is humaidu"
             ],
             "responses": [
-                "I was born the moment you ran the code.",
-                "Age is just a number, but I am very young.",
-                "I am timeless."
-            ],
-            "context": [
-                ""
+                "I was built by Bennin Kojo Humaidu, a Computer Engineering student who loves ML and web dev."
             ]
         },
         {
-            "tag": "jokes",
+            "tag": "creator_projects",
             "patterns": [
-                "Tell me a joke",
-                "Say something funny",
-                "Do you know any jokes?",
-                "Make me laugh"
+                "what projects has your creator built",
+                "what has he built",
+                "projects"
             ],
             "responses": [
-                "Why do Java programmers wear glasses? Because they don't C#.",
-                "There are 10 types of people in the world: Those who understand binary, and those who don't.",
-                "A SQL query walks into a bar, walks up to two tables and asks... 'Can I join you?'"
-            ],
-            "context": [
-                ""
+                "He has built a Lost & Found portal, a Weather App, and a ChartBot deep learning project among others."
             ]
         },
         {
-            "tag": "creator",
+            "tag": "background",
             "patterns": [
-                "Who created you?",
-                "Who made you?",
-                "Who is your developer?"
+                "what do you do",
+                "what are you",
+                "what is your purpose"
             ],
             "responses": [
-                "I was created by a brilliant developer using Python and Deep Learning.",
-                "My logic is written in Python, but my soul belongs to my creator."
+                "I help with code, AI/ML concepts, project ideas, debugging and general productivity."
+            ]
+        },
+        {
+            "tag": "python_help",
+            "patterns": [
+                "help me with python",
+                "python",
+                "python example",
+                "python code"
             ],
-            "context": [
+            "responses": [
+                "Tell me the Python topic or paste code and I'll help debug or explain."
+            ]
+        },
+        {
+            "tag": "web_dev_help",
+            "patterns": [
+                "html help",
+                "css help",
+                "javascript help",
+                "web development help"
+            ],
+            "responses": [
+                "I can explain front-end or back-end concepts, review code, and give project ideas."
+            ]
+        },
+        {
+            "tag": "ml_help",
+            "patterns": [
+                "machine learning",
+                "ml help",
+                "teach me ml",
+                "explain ml"
+            ],
+            "responses": [
+                "ML is teaching models from data. Want supervised vs unsupervised, or a specific algorithm?"
+            ]
+        },
+        {
+            "tag": "dl_help",
+            "patterns": [
+                "deep learning",
+                "neural network",
+                "cnn",
+                "transformer"
+            ],
+            "responses": [
+                "Deep learning uses layered neural networks. I can explain layers, training, and architectures."
+            ]
+        },
+        {
+            "tag": "project_ideas",
+            "patterns": [
+                "project ideas",
+                "ideas for projects",
+                "project suggestions"
+            ],
+            "responses": [
+                "Try a recommender, object detection app, chatbots with memory, or a full-stack portfolio site."
+            ]
+        },
+        {
+            "tag": "debugging",
+            "patterns": [
+                "there is an error",
+                "fix my code",
+                "bug",
+                "debug this",
+                "error"
+            ],
+            "responses": [
+                "Paste the error message or code snippet and I'll help you debug it."
+            ]
+        },
+        {
+            "tag": "what_time",
+            "patterns": [
+                "what time is it",
+                "current time",
+                "time"
+            ],
+            "responses": [
+                "I can't read your device clock directly here, but you can check your system time. Do you want time-zone conversions?"
+            ]
+        },
+        {
+            "tag": "what_date",
+            "patterns": [
+                "what is today's date",
+                "date today",
+                "today's date"
+            ],
+            "responses": [
+                "I don't access the system date here; check your device. Want me to compute a date difference?"
+            ]
+        },
+        {
+            "tag": "joke",
+            "patterns": [
+                "tell me a joke",
+                "joke",
+                "make me laugh"
+            ],
+            "responses": [
+                "Why do programmers prefer dark mode? Because light attracts bugs. 😄"
+            ]
+        },
+        {
+            "tag": "quote",
+            "patterns": [
+                "give me a quote",
+                "inspire me",
+                "motivate me"
+            ],
+            "responses": [
+                "“The best way to predict the future is to invent it.” — Alan Kay"
+            ]
+        },
+        {
+            "tag": "story",
+            "patterns": [
+                "tell a story",
+                "short story",
+                "story"
+            ],
+            "responses": [
+                "Once a dev shipped a bug, learned from it, and then shipped something amazing. The end."
+            ]
+        },
+        {
+            "tag": "smalltalk_howareyou",
+            "patterns": [
+                "how are you",
+                "how do you do",
+                "are you okay"
+            ],
+            "responses": [
+                "I'm doing great, thanks for asking! Ready when you are."
+            ]
+        },
+        {
+            "tag": "fallback",
+            "patterns": [
                 ""
+            ],
+            "responses": [
+                "I'm not sure I understand — can you rephrase?",
+                "I don't know that yet, but I can learn!"
+            ]
+        },
+        {
+            "tag": "weather_query",
+            "patterns": [
+                "what's the weather",
+                "weather in",
+                "weather for"
+            ],
+            "responses": [
+                "Tell me the city and I'll fetch the current weather."
+            ]
+        },
+        {
+            "tag": "memory_set",
+            "patterns": [
+                "remember that",
+                "note that",
+                "save this about me",
+                "remember my"
+            ],
+            "responses": [
+                "Okay — I'll remember that. You can ask me later with 'what do you know about me'."
+            ]
+        },
+        {
+            "tag": "memory_get",
+            "patterns": [
+                "what do you know about me",
+                "what do you remember",
+                "who am i"
+            ],
+            "responses": [
+                "I remember some things about you — ask me what you'd like me to recall."
+            ]
+        },
+        {
+            "tag": "auth_login",
+            "patterns": [
+                "login",
+                "sign in",
+                "sign me in"
+            ],
+            "responses": [
+                "Use the login box to sign in. This example uses a demo username/password stored locally."
+            ]
+        },
+        {
+            "tag": "auth_logout",
+            "patterns": [
+                "logout",
+                "sign out",
+                "log me out"
+            ],
+            "responses": [
+                "You are now logged out."
+            ]
+        },
+        {
+            "tag": "tts",
+            "patterns": [
+                "speak",
+                "read this",
+                "say this out loud"
+            ],
+            "responses": [
+                "I can speak responses using your browser's speech synthesis."
+            ]
+        },
+        {
+            "tag": "stt",
+            "patterns": [
+                "listen to me",
+                "speech to text",
+                "speak to ghost"
+            ],
+            "responses": [
+                "Use the microphone button to speak — I'll transcribe your voice."
+            ]
+        },
+        {
+            "tag": "rag_query",
+            "patterns": [
+                "search knowledge",
+                "find docs",
+                "search my notes",
+                "r a g"
+            ],
+            "responses": [
+                "I can search a knowledge base and combine exact answers with my intents. Use /rag endpoint."
+            ]
+        },
+        {
+            "tag": "thanks_helpful",
+            "patterns": [
+                "that helped",
+                "this is helpful",
+                "good job"
+            ],
+            "responses": [
+                "Happy to help!"
             ]
         }
     ]

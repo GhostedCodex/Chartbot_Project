@@ -1,16 +1,30 @@
-# Python bytecode (temporary files created by Python)
+# Python
 __pycache__/
 *.pyc
 
-# Virtual Environments (we don't upload the libraries, just the requirements)
+# Virtual environment
 venv/
-env/
+.venv/
+
+# Model files
+*.h5
+*.pth
+*.pt
+*.pickle
+*.pkl
+*.joblib
+
+# JSON data
+training_data.json
+data/
+datasets/
+
+# Node modules (if using JS frontend)
+node_modules/
+
+# Environment files
 .env
 
-# IDE settings (VS Code or PyCharm settings are personal, not for the project)
-.vscode/
-.idea/
-
-# Mac OS generated files (if you are on a Mac)
-.DS_Store
-
+# Cache
+*.cache
+*.log
