@@ -1,10 +1,6 @@
-flask
-tensorflow-cpu
-nltk
+Flask==2.3.3
+tensorflow==2.12.0    # If using DL
+keras==2.12.0
 numpy
-scikit-learn
-pyyaml
-sentence-transformers
-faiss-cpu
-requests
+pickle5
 gunicorn
