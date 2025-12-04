@@ -9,10 +9,17 @@ import pickle
 from tensorflow.keras.models import load_model
 import requests
 
-# Initialize NLTK
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+# Setting NLTK data to local directory
+nltk_data_path = os.path.join(os.path.dirname(__file__), "nltk_data")
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+
+nltk.data.path.append(nltk_data_path)
+
+# Download necessary NLTK data files if not already present
+nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('wordnet', download_dir=nltk_data_path)
+nltk.download('omw-1.4', download_dir=nltk_data_path)
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET", "very-secret-key")
